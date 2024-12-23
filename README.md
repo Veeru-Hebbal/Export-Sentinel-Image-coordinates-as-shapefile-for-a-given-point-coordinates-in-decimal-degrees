@@ -1,4 +1,4 @@
-# Export Sentinel Image Coordinates as Shapefile for a Given Point in Decimal Degrees
+# Export Sentinel-2 image tile coordinates as Shapefile for a Given Point in Decimal Degrees
 
 ## Description:
 This application enables users to export the corner coordinates of Sentinel-2 imagery tiles as a shapefile for a specified geographic location. By providing point coordinates in decimal degrees (longitude and latitude), along with parameters like date range and maximum cloud cover percentage, the tool identifies the intersecting Sentinel-2 tiles and generates shapefiles containing the bounding coordinates of these tiles.
