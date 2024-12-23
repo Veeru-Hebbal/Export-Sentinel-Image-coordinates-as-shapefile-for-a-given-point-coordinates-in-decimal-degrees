@@ -7,7 +7,7 @@ from zipfile import ZipFile
 
 # Authenticate and initialize Earth Engine
 ee.Authenticate()
-ee.Initialize()
+ee.Initialize(project="gee-project-lulc")
 
 # Function to process Sentinel-2 data
 def process_sentinel(input_coordinates, start_date, end_date, max_cloud_cover, output_folder):
