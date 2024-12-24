@@ -4,10 +4,14 @@ import geopandas as gpd
 from shapely.geometry import Polygon
 import os
 from zipfile import ZipFile
+import json
 
-# Authenticate and initialize Earth Engine
-ee.Authenticate()
-ee.Initialize(project="gee-project-lulc")
+# Load the service account credentials from Streamlit secrets
+service_account = json.loads(st.secrets["service_account_json"])
+credentials = ee.ServiceAccountCredentials(
+    service_account["client_email"], key_data=json.dumps(service_account)
+)
+ee.Initialize(credentials)
 
 # Function to process Sentinel-2 data
 def process_sentinel(input_coordinates, start_date, end_date, max_cloud_cover, output_folder):
