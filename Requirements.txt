@@ -5,7 +5,7 @@ folium
 streamlit
 earthengine-api
 geopandas
-mgrs.
+mgrs
 shapely
 pyproj
 requests
