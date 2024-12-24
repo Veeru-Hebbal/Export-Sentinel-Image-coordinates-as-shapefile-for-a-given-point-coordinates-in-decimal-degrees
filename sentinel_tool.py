@@ -6,7 +6,7 @@ import os
 from zipfile import ZipFile
 import json
 
-# Load the service account credentials from Streamlit secrets
+# Load GEE credentials from Streamlit secrets
 service_account = json.loads(st.secrets["service_account_json"])
 credentials = ee.ServiceAccountCredentials(
     service_account["client_email"], key_data=json.dumps(service_account)
