@@ -1,32 +1,9 @@
-import os
-import sys
-import subprocess
-
-# Ensure required modules are installed
-def install_package(package):
-    subprocess.check_call([sys.executable, "-m", "pip", "install", package])
-
-try:
-    import ee
-except ImportError:
-    install_package("earthengine-api")
-    import ee  # Retry import after installation
-
-try:
-    import geopandas as gpd
-except ImportError:
-    install_package("geopandas")
-    import geopandas as gpd
-
-try:
-    from shapely.geometry import Polygon
-except ImportError:
-    install_package("shapely")
-    from shapely.geometry import Polygon
-
-# Other imports
 import streamlit as st
+import ee
+import geopandas as gpd
+from shapely.geometry import Polygon
 import json
+
 
 
 # Load GEE credentials from Streamlit secrets
