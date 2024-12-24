@@ -1,11 +1,6 @@
-geemap
-ipyleaflet
-geopy
-folium
 streamlit
 earthengine-api
 geopandas
-mgrs
 shapely
 pyproj
 requests
