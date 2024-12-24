@@ -1,0 +1,6 @@
+streamlit
+earthengine-api
+geopandas
+shapely
+pyproj
+requests
